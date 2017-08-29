@@ -33,6 +33,30 @@ $(document).ready(function() {
   $('#removeAllDancers').click(function() {
     $('#danceFloor').html('');
   });
+
+  $('#lineDance').click(function() {
+    // select all dancers (every element with class dancer)
+    // change their x and y positions
+      // y is constant
+      // iterate over elements
+        // increment x by div width / number of dancers
+    // z-index = Math.round(x);
+    var top = (($('#danceFloor').height()) / 2) + 100;
+    var leftIncrement = ($('#danceFloor').width()) / ($('.dancer').length);
+    var left = 0;
+    
+    $('.dancer').each(function(index, dancer) {
+      if ($(dancer).hasClass('scary')) {
+        left = (leftIncrement) * index - 100;
+      } else {
+        left = (leftIncrement) * index;
+      } 
+      // dancer.style.cssText = 'top:' + top + ' !important; left:' + left + ' !important; z-index:' + Math.round(left);
+      $(dancer).css('top', top);
+      $(dancer).css('left', left);
+      $(dancer).css('z-index', Math.round(left));
+    });
+  });
   
 });
 

@@ -1,3 +1,6 @@
+/*font-family: 'Monoton', cursive;
+font-family: 'Raleway', sans-serif;*/
+
 body, html{
   height:100%;
 }
@@ -9,21 +12,44 @@ body{
   background-size: 100% 100%;
   background-position: fixed;
   background-repeat: no-repeat;
-  overflow-x: none;
+  overflow-x: hidden !important;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+.title {
+  animation-name: flash;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  display: block;
+  font-size: 75px;
+  font-family: 'Monoton', cursive;
+  margin: 50px auto;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
 }
-.topbar{
-  height:32px;
-  background-color: #555;
+.addDancerButton, #removeAllDancers, #lineDance  {
+  float: left;
+  padding: 8px 15px;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid skyblue;
+  background-color: rgba(116, 135, 165, 0.5);
 }
-.title{
-  background-color: #777;
+.addDancerButton:hover, #removeAllDancers:hover, #lineDance:hover {
+  background-color: rgba(255, 255, 255, 1.0);
+  color: rgb(0, 50, 135);
+}
+
+#removeAllDancers, #lineDance {
+  float: right;
+}
+a {
+  text-decoration: none;
 }
 .dancer{
   position:absolute;
@@ -64,4 +90,23 @@ body, a:link, a:visited, a:active{
   width:100%;
   max-width:100%;
   max-height:80%;
+  overflow: hidden !important;
+}
+
+@keyframes flash {
+  0% { 
+    color: white;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: white;
+  }
 }
