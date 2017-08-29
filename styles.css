@@ -30,7 +30,7 @@ body, a:link, a:visited, a:active{
   text-align: center;
   color: white;
 }
-.addDancerButton, #removeAllDancers, #lineDance  {
+.addDancerButton, .moveDancers  {
   float: left;
   padding: 8px 15px;
   font-family: 'Raleway', sans-serif;
@@ -40,12 +40,12 @@ body, a:link, a:visited, a:active{
   border: 1px solid skyblue;
   background-color: rgba(116, 135, 165, 0.5);
 }
-.addDancerButton:hover, #removeAllDancers:hover, #lineDance:hover {
+.addDancerButton:hover, .moveDancers:hover {
   background-color: rgba(255, 255, 255, 1.0);
   color: rgb(0, 50, 135);
 }
 
-#removeAllDancers, #lineDance {
+.moveDancers {
   float: right;
 }
 a {
@@ -58,6 +58,7 @@ a {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% 100%;
+  transition:all 1s;
 }
 .blinky {
   height:190px;
@@ -91,6 +92,15 @@ a {
   max-width:100%;
   max-height:80%;
   overflow: hidden !important;
+}
+.bubble {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(0, 50, 135);
+  display: inline-block;
+  position: absolute;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 @keyframes flash {

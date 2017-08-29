@@ -57,6 +57,43 @@ $(document).ready(function() {
       $(dancer).css('z-index', Math.round(left));
     });
   });
+
+  var quoteArray = [
+    'Great party!', 'Groovy music!', 'Raise the roof!', 'Sweet moves!', 'Who called the cops?', 'Is there alcohol in this?',
+    'Who\'s house is this?'];
+    
+  var $bubble = $('<div class="bubble"></div>');
+  $('#danceFloor').append($bubble);
+  $bubble.hide();
   
+  $('#danceFloor').on('mouseover', '.dancer', function() {
+    // create quote bubble 
+    // retrieve random quote from quote array
+    // add random quote to div
+    // attach div above dancer
+    // retrieve top and left properties of dancer
+    // $(this)
+    var top = $(this).css('top');
+    var left = $(this).css('left');
+    $bubble.css('left', left);
+    $bubble.html(quoteArray[Math.floor(Math.random() * quoteArray.length)]);
+    $bubble.css('top', top);
+    $bubble.css('z-index', Math.max($('#danceFloor').width(), ($('#danceFloor').height() - 300) + 230));
+    $bubble.fadeIn();
+  });
+
+  $('#danceFloor').on('mouseout', '.dancer', function() {
+    $('.bubble').fadeOut();    
+  });
+
+  $('#randomize').click(function() {
+    $('.dancer').each(function(index, dancer) {
+      var top = ($('#danceFloor').height() - 300) * Math.random() + 230;
+      var left = $('#danceFloor').width() * Math.random();
+      $(this).css('top', top);
+      $(this).css('left', left);
+      $(this).css('z-index', top);
+    });
+  });
 });
 

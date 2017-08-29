@@ -17,13 +17,16 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeScaryDancer">add a scary dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeGroovyDancer">add a groovy dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeFlippyDancer">flip random dancer</a>
-      <a href="#" id="removeAllDancers">End the Fun</a>
-      <a href="#" id="lineDance">Line Dance!</a>
+      <a href="#" id="removeAllDancers" class="moveDancers">End the Fun</a>
+      <a href="#" id="lineDance" class="moveDancers">Line Dance!</a>
+      <a href="#" id="randomize" class="moveDancers">Randomize</a>
     </div>
       <h1 class="title">object dance party</h1>
     
     <div id="danceFloor"></div>
-
+    <audio controls autoplay="autoplay">
+      <source src="audio/bensound-popdance.mp3" type="audio/mpeg">
+    </audio>
     <script src="src/init.js"></script>
   </body>
 </html>
