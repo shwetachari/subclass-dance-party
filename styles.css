@@ -5,6 +5,11 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url(images/bg1.jpg);
+  background-size: 100% 100%;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  overflow-x: none;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -21,21 +26,42 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
+  border: 5px solid red;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 100%;
+}
+.blinky {
+  height:190px;
+  width: 160px;
+  background-image: url(images/giphy.gif);
+  border: none !important;
 }
 .scary {
-  border-color: skyblue;
-  border-radius: 0;
+  height:200px;
+  width: 400px;
+  background-image: url(images/shark.gif);
+  border: none !important;
 }
 .groovy {
-  height: 20px;
-  width: 20px;
-  background: green;
-  border: 3px dotted orange;
-  border-radius: 5px;
+  height: 190px;
+  width:160px;
+  background-image: url(images/smooch.gif);
+  border: none !important;
+}
+.flippy {
+  transition:all 1s;
 }
 .hidden {
   display: none !important;
+}
+#danceFloor {
+  display: inline-block;
+  margin-top:200px;
+  height:700px;
+  width:100%;
+  max-width:100%;
+  max-height:80%;
 }

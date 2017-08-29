@@ -8,7 +8,5 @@ MakeGroovyDancer.prototype.constructor = MakeGroovyDancer;
 
 MakeGroovyDancer.prototype.step = function() {
   MakeDancer.prototype.step.call(this);
-  this.$node.animate({
-    right: '200px'
-  });
+  this.$node.removeClass('hidden');
 };

@@ -8,14 +8,20 @@
     <script src="src/blinkyDancer.js"></script>
     <script src="src/scaryDancer.js"></script>
     <script src="src/groovyDancer.js"></script>
+    <script src="src/flipDancer.js"></script>
   </head>
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeFlippyDancer">flip random dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeBlinkyDancer">add a blinky dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeScaryDancer">add a scary dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeGroovyDancer">add a groovy dancer</a>
+      <a href="#" id="removeAllDancers">Remove all Dancers</a>
     </div>
+    
+    <div id="danceFloor"></div>
+
     <script src="src/init.js"></script>
   </body>
 </html>
