@@ -96,11 +96,18 @@ a {
 .bubble {
   font-family: 'Raleway', sans-serif;
   color: rgb(0, 50, 135);
+  width: 250px;
+  height: 120px;
   display: inline-block;
   position: absolute;
-  background: white;
-  padding: 5px 10px;
+  background-image: url(images/bubble.png);
+  padding-top: 50px;
   border-radius: 5px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  transform: translate(-130px, -115px);
 }
 
 @keyframes flash {
